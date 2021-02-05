@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     private DialogModel _dialogModel;
     private DialogPresenter _dialogPresenter;
-    [SerializeField] private DialogView _dialogView;
+    [SerializeField] public DialogView _dialogView;
 
     private void Start()
     {

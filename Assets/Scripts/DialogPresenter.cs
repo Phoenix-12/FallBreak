@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
-using Button = UnityEngine.UIElements.Button;
 
 namespace Assets.Scripts
 {
@@ -20,15 +19,23 @@ namespace Assets.Scripts
 
         public void Enable()
         {
+            Debug.Log(_dialogView.Buttons[DialogType.Gift]);
             _dialogModel.Show += Show;
             _dialogModel.Hide += Hide;
-            
+            _dialogView.Buttons[DialogType.Gift].onClick.AddListener(OnGift);
+            _dialogView.Buttons[DialogType.Shop].onClick.AddListener(OnShop);
+            _dialogView.Buttons[DialogType.Settings].onClick.AddListener(OnSettings);
+            _dialogView.Buttons[DialogType.Rating].onClick.AddListener(OnRating);
         }
 
         public void Disable()
         {
             _dialogModel.Hide -= Hide;
             _dialogModel.Show -= Show;
+            _dialogView.Buttons[DialogType.Gift].onClick.RemoveListener(OnGift);
+            _dialogView.Buttons[DialogType.Shop].onClick.RemoveListener(OnShop);
+            _dialogView.Buttons[DialogType.Settings].onClick.RemoveListener(OnSettings);
+            _dialogView.Buttons[DialogType.Rating].onClick.RemoveListener(OnRating);
         }
 
         private void Show(){

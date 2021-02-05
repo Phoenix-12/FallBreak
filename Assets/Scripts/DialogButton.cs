@@ -1,5 +1,6 @@
 ﻿using System;
-using UnityEngine.UIElements;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -7,6 +8,6 @@ namespace Assets.Scripts
     public class DialogButton
     {
         public DialogType Type;
-        public Button Button; 
+        public Button Button;
     }
 }
