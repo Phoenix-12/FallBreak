@@ -17,8 +17,6 @@ public class DialogView : MonoBehaviour
         foreach (var dialogButton in _buttons)
         {
             Buttons.Add(dialogButton.Type , dialogButton.Button);
-            Debug.Log(dialogButton.Type);
-            Debug.Log(dialogButton.Button);
         }
     }
     public void FillRootsDictionary()
