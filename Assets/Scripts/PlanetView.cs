@@ -6,7 +6,7 @@ using UnityEngine.PlayerLoop;
 public class PlanetView : MonoBehaviour
 {
     public GameObject Planet;
-    public float SpeedRotation = 2f;
+    [SerializeField]public float SpeedRotation;
     
     public void FixedUpdate()
     {
