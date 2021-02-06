@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            _dialogModel.OnHide();
             Instantiate(_probePrefab, _spawnPointProbe, Quaternion.identity);
         }
     }

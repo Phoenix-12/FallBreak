@@ -21,10 +21,10 @@ public class ProbeView : MonoBehaviour
         Probe.transform.Translate(0,SpeedProbe,0);
     }
 
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter(Collider collider)
     {
+        Debug.Log(collider);
         SpeedProbe = 0;
-        Debug.Log(planet);
         Probe.transform.parent = planet.transform;
     }
     public void Update()
